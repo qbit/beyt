@@ -49,7 +49,7 @@ func buildImage(db int) *myIcon {
 		Dot:  fixed.P(-3, 190),
 	}
 
-	r := []rune(fmt.Sprintf("%d", db))
+	r := []rune(fmt.Sprintf("%3s", fmt.Sprintf("%d", db)))
 	l := string(r)
 
 	d.DrawString(l)
