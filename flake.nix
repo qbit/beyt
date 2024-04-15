@@ -1,7 +1,7 @@
 {
   description = "beyt: beat time in your systray";
 
-  inputs.nixpkgs.url = "nixpkgs/nixos-23.11";
+  inputs.nixpkgs.url = "nixpkgs/nixos-unstable";
 
   outputs =
     { self
@@ -23,10 +23,10 @@
         {
           beyt = with pkgs; pkgs.buildGoModule rec {
             pname = "beyt";
-            version = "v0.1.0";
+            version = "v0.1.1";
             src = ./.;
 
-            vendorHash = "sha256-RKOZUkL1Gjm//AhDhmi3ewGwz+xHLiGNifwH6RUtcAs=";
+            vendorHash = "sha256-q1cpnirvqCyYvbyuN4CFqHpc5coW17rYz9ce8blSpSg=";
 
             nativeBuildInputs = [ pkg-config copyDesktopItems ];
             buildInputs = [
